@@ -195,3 +195,84 @@ figure {
 .about > p {
   margin: 0;
 }
+
+
+/* <--------------MEDIA QUERIES--------> */
+
+@media (min-width: 768px) {
+  .site-nav {
+    position: fixed;
+    top: 0;
+    width: 80px;
+    padding-top: 80px;
+}
+  .site-nav-item {
+    width: 100%;
+
+  }
+  .site-logo {
+    position: fixed;
+    z-index: 101;
+    width: 50px;
+}
+  .movie {
+    margin-left: 100px;
+  }
+
+  .movie-overview {
+    display: block;
+  }
+  .site-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 100px;
+    background-color: black;
+    color: white;
+}
+  .about {
+    background-color: black;
+    color: white;
+  }
+}
+
+@media (min-width: 992px) {
+
+  .movie-poster, .movie-backdrop {
+    display: block;
+  }
+  .movie-backdrop {
+    display: none;
+  }
+  .movie:first-child .movie-poster {
+    display: none;
+  }
+  .movie:first-child .movie-backdrop {
+    display: block;
+
+  }
+
+  .movie-overview {
+    display: none;
+  }
+
+  .movie:first-child .movie-overview {
+    display:block;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 100px;
+  }
+
+  .movie:first-child {
+    grid-column: 1 / 4;
+  }
+
+  .movie {
+    margin: auto;
+  }
+
+}
+
+/* <--------------END OF MEDIA QUERIES--------> */
